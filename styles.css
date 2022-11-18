@@ -1,0 +1,421 @@
+ .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 7fr;
+    height: 99vh;
+    width: 100vw;
+}
+
+.sidebar {
+    background-color: rgb(13, 162, 221);
+    color: white;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.header {
+    background-color: white;
+    grid-column: 2;
+    grid-row: 1;
+    box-shadow: 0 rgb(0 0 0 / 0.2);
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) 3fr repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr;
+    justify-content: center;
+    align-items: end;
+    grid-row: 1;
+}
+
+
+.header-bottom {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20px 20px;
+    grid-gap: 10px;
+    grid-row: 2;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center;
+}
+
+
+.user-img {
+    grid-row: 1 / -1;
+    grid-column: 1;
+}
+
+.user-img > img {
+    display: block;
+    float: right;
+    height: 50px;
+    width: 50px;
+}
+
+.header-bottom > button {
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(72, 190, 236);
+    border: 0;
+    height: 2em;
+}
+
+.header-bottom > button:hover {
+    box-shadow: 12px 12px 2px 1px rgb(202, 208, 215);
+}
+
+.sidebar > div > a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+.new {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.upload {
+    grid-column: 5;
+}
+
+.share {
+    grid-column: 6;
+}
+
+.welcome-message {
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 12px;
+    align-self: end;
+}
+
+.user-handle {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 20px;
+}
+.search-icon {
+    grid-column: 1;
+    display: block;
+    margin-left: 50px
+}
+
+.search-bar {
+    grid-column: 2 / 4;
+    margin-right: 100px;
+    background-color: rgb(202, 208, 215);
+    border-radius: 10px;
+    border: 0;
+}
+
+.bell {
+    grid-column: 4;
+}
+
+.user-icon {
+    grid-column: 5;
+}
+
+.user-name {
+    grid-column: 6;
+    margin-right: 10px;
+}
+
+
+.main-content {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: rgba(244, 244, 244, 0.986);
+    display: grid;
+    grid-template-rows: 25px 1fr;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 10px;
+    border: 1px solid black;
+}
+
+.dashboard {
+    grid-row: 1 / 3;
+    margin-top: 25px;
+    font-size: 1.25em;
+}
+
+*::before {
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+
+.dashboard::before {
+    content: url('images/apple-icloud.png');
+}
+
+
+.home {
+    grid-row: 4;
+}
+
+.home::before {
+    content: url('images/home.png');
+}
+
+.profile {
+    grid-row: 5;
+}
+
+.profile::before {
+    content: url('images/account.png');
+}
+
+.messages {
+    grid-row: 6;
+}
+
+.messages::before {
+    content: url('images/message-reply.png');
+}
+
+.history {
+    grid-row: 7;
+}
+
+.history::before {
+    content: url('images/history.png');
+}
+
+.tasks {
+    grid-row: 8;
+}
+
+.tasks::before {
+    content: url('images/file-tree.png');
+}
+
+.communities {
+    grid-row: 9;
+}
+
+.communities::before {
+    content: url('images/account-group.png');
+}
+
+.settings {
+    grid-row: 11;
+}
+
+.settings::before {
+    content: url('images/cog.png');
+}
+
+.support {
+    grid-row: 12;
+}
+
+.support::before {
+    content: url('images/chat-question.png');
+}
+
+.privacy {
+    grid-row: 13; 
+}
+
+.privacy::before {
+    content: url('images/shield-lock.png');
+}
+
+.main-first {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: start;
+}
+
+.projects {
+    background-color: white;
+    height: 75%;
+    width: 90%;
+    border-radius: 10px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    border-left: 7px solid rgb(255, 225, 0);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.upper-half {
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    margin-left: 10px;
+}
+
+.title-text {
+    grid-row: 1;
+    font-weight: bold;
+    font-size: 1em;
+    align-self: end;
+}
+
+.main-text {
+    grid-row: 2;
+    align-self: start;
+}
+
+.lower-half {
+    grid-row: 2;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.star {
+    grid-column: 4;
+}
+
+.eye {
+    grid-column: 5;
+}
+
+.fork {
+    grid-column: 6;
+}
+
+.main-second {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 3fr 1fr 3fr;
+}
+
+.super-cool {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.less-cool {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.impossible {
+    grid-row: 2;
+    grid-column: 1;
+}
+.easy-peasy {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.ad-blocker {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.money-maker {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.your-projects {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: end;
+    margin-left: 20px;
+    font-weight: 900;
+}
+
+.announcements {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: end;
+    font-weight: 900;
+}
+
+.announcements-div {
+    grid-row: 1;
+    background-color: white;
+    max-height: 300px;
+    font-size: 12px;
+    width: 90%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
+}
+
+.trending-div {
+    grid-row: 3;
+    background-color: white;
+    height: 80%;
+    width: 90%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
+}
+
+.trending { 
+    grid-row: 2;
+    align-self: end;
+    margin-bottom: 5px;
+    font-weight:900;
+}
+
+.trending, .announcements, .your-projects {
+    font-size: 1.20em
+}
+
+.title-announce {
+    grid-row: 1;
+}
+
+.title-des {
+    grid-row: 2;
+}
+
+.community-share {
+    grid-row: 3;
+}
+
+.community-des {
+    grid-row: 4;
+}
+
+.updated-privacy {
+    grid-row: 5;
+}
+
+.updated-des {
+    grid-row: 6;
+}
+
+.announcements-div > div {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.title-des, .community-des, .updated-des {
+    border-bottom: 2px solid grey;
+    margin-bottom: 5px;
+}
+
+.title-announce, .community-share, .updated-privacy {
+    align-self: end;
+    font-weight: 900px;
+    font-size: 1.3em;
+}
+
+
+
+
+
+
+

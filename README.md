@@ -1,2 +1,2 @@
 # GridDock
-grid display practice
+grid-display pracrice
